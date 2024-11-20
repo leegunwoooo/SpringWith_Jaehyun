@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<div th:each="thing : ${thing}">
+    <h1 th:text="${thing.name}"></h1>
+    <h1 th:text="${thing.value}"></h1>
+    <h1 th:text="${thing.count}"></h1>
+</div>
+<div>
+    <h4>셔츠</h4>
+    <p>8억</p>
+</div>
+
+</body>
+</html>
