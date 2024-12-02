@@ -5,6 +5,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.lang.reflect.Array;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -38,7 +39,7 @@ public class ShopController {
 
     @GetMapping("/list")
     public String list(Model model) {
-        List<Map<String, String>> thing = new ArrayList<>();
+        ArrayList<Map<String, String>> thing = new ArrayList<>();
 
         Map<String, String> thing1 = new HashMap<>();
         thing1.put("name", "권민재");
@@ -61,6 +62,4 @@ public class ShopController {
         model.addAttribute("thing", thing);
         return "list";
     }
-
-
 }
